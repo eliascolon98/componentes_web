@@ -1,0 +1,69 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/9c/cc/12/9ccc124405fbc4935e3fa0cb3b2c4736.jpg);
+    background-repeat: no-repeat;
+    background-size: 131%,100%;
+}
+.container{
+    background: #000;
+}
+.cont-controls{
+    height: 200px;
+    background: gainsboro;
+    padding-bottom: 10px
+}
+.btn-left, .btn-right, .btn-up, .btn-down{
+    background: blue;
+    height: 60px;
+    width: 50px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: -1px 2px 20px 0px rgba(0,0,0,0.75);
+}
+.shoot{
+    background: blue;
+    height: 90px;
+    width: 90px;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: -1px 2px 20px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+}
+.shoot i{
+    font-size: 40px;
+}
+.shoot:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.btn-down:hover, .btn-up:hover, .btn-left:hover, .btn-right:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.btn-left {
+    position: absolute;
+    top: 70px;
+
+}
+.btn-right{
+    position: absolute;
+    left: 116px;
+    top: 71px;
+}
+.btn-up{
+    position: absolute;
+    left: 66px;
+    top: 7px;
+
+}
+.btn-down{
+    position: absolute;
+    top: 135px;
+    left: 65px;
+
+}
+i{
+    color: white;
+
+}

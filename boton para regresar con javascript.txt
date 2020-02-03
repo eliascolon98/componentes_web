@@ -1,0 +1,22 @@
+<button class="btn-default btn btn-back">Cancelar</button>
+
+$( document ).ready(function() {
+                
+    $(".btn-act").click(function(){
+        var step_count =  localStorage.getItem("steps");
+
+        if(step_count > 0){
+            localStorage.setItem("steps", (step_count*1) + 1);
+        }else{
+            localStorage.setItem("steps", 1);
+        }
+        location.reload();
+    });
+     
+    $(".btn-back").click(function(){
+        var step_count =  localStorage.getItem("steps");
+        localStorage.removeItem("steps");
+        history.go(0-((step_count*1)+1)); return false;
+    });
+    
+});

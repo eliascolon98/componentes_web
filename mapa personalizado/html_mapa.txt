@@ -1,0 +1,5 @@
+                <!-- GOOGLE MAP AREA START -->
+                <div class="google-map-area">
+                    <div id="googleMap"></div>
+                </div>
+                <!-- GOOGLE MAP AREA END -->

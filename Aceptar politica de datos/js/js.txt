@@ -1,0 +1,16 @@
+
+function valid() {
+    
+    if (document.getElementById("acepto_chk").checked==false){
+        alert("Hay que aceptar la Política de Tratamiento de Datos");
+        
+        checkBox.focus();
+        return false;
+    }else{
+    	alert("Política de Tratamiento de Datos aceptados correctamente");
+    	document.getElementById("validar").submit();
+    	
+    }
+    
+    return false;
+    }

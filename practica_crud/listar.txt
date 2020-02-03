@@ -1,0 +1,30 @@
+    <table class="table table-bordered table-striped" style="text-align: center;">
+          <thead class="thead-dark">
+            <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Borrar</th>
+           
+            </tr>
+          </thead>
+          <?php
+          $listar = "SELECT * from datos_p";
+          $res = mysqli_query($con,$listar);
+          while($datos = mysqli_fetch_array($res)){
+            echo '<tr>
+            <td>'.$datos["id"].'</td>
+            <td>'.$datos["nombre"].'</td>
+            <td>'.$datos["apellido"].'</td>
+            <td>
+            <form action="borrar.php" method="post" id="borrar">
+            <input type="text" id="id" name="id" value="'.$datos["id"].'" readonly style="display:none;"/>
+            <button type="submit" class="btn-delete">X</button>
+            </form>
+            </td>
+          
+            </tr>';  
+
+          }?>
+         
+        </table>

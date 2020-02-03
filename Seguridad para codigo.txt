@@ -1,0 +1,5 @@
+HTML y CSS
+https://www.willpeavy.com/minifier/
+
+Javascript
+https://obfuscator.io/

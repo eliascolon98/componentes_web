@@ -1,0 +1,27 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #afca0b;
+	border-radius: 10px;
+	height: 60px;
+	width: 230px;
+}
+
+.estilotextarea3 {font-family: Garamond,verdana;font-size: 18pt;font-weight: bold;letter-spacing: 5px;
+border: 2px solid #386836;
+	border-radius: 10px;
+	height: 60px;
+	width: 230px;} 
+
+.bot {
+background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

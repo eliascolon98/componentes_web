@@ -1,0 +1,48 @@
+function validacion() {
+    if ($('#nombre').val() == '') {
+        alert("Por favor ingrese su nombre");
+        return false;
+    }else if ($('#telefono').val() == '') {
+        alert("Por favor ingrese su télefono o celular");
+        return false;
+    }else if ($('#email').val() == '') {
+        alert("Por favor ingrese su correo electrónico");
+        return false;
+    }else if ($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+            alert("email invalido");
+            return false;
+    }else{
+        return true;
+    }
+    
+}
+
+$(".btn_cotizar").click(function () {
+    if(validacion() == true){
+        var datos = $("#form_cot").serialize();
+        $.ajax({
+            url: "js/guardarInv.php",
+            type: "POST",
+            data: datos,
+            dataType: "html",
+            success: function (data) {
+                console.log(data),
+                    console.log("sending...");
+                if (data == 1) {
+                    alert("Cotinzacion éxitosa");
+                    redirect();
+                } else {
+                    alert("Error al cotizar");
+                    redirect();
+                }
+    
+                function redirect() {
+                    location.reload();
+                }
+            }
+        });
+    }
+
+
+    return false;
+});

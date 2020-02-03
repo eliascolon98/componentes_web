@@ -1,0 +1,29 @@
+ <script>
+        //Validar solo letras
+        function validar(e) { // 1
+            tecla = (document.all) ? e.keyCode : e.which; // 2
+            if (tecla == 8) return true; // 3
+            patron = /[A-Za-z\s]/; // 4
+            te = String.fromCharCode(tecla); // 5
+            return patron.test(te); // 6
+        }
+	//validar solo numeros
+        window.addEventListener("load", function () {
+            apellido.addEventListener("keypress", soloNumeros, false); ->agregar el name del input que desea validar
+        });
+
+        //Solo permite introducir numeros.
+        function soloNumeros(e) {
+            var key = window.event ? e.which : e.keyCode;
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            }
+        }
+    </script>
+
+
+onkeypress="return validar(event)" ->agregar al input para solo letras
+
+
+VAIDACIONES EN LOS INPUT
+https://lenguajehtml.com/p/html/formularios/validaciones-html5

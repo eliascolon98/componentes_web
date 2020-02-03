@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    var fullUrl = window.location.href;
+    var urlComponents = fullUrl.split("#");
+    var data = urlComponents[urlComponents.length - 1];
+    
+    if(data == "false"){
+        alert("");
+    }else if(data == "NotFound"){
+        alert("");
+    }
+})

@@ -1,0 +1,54 @@
+<?php
+//Matriz con numeros aleatorios
+$matrix = array();
+
+for($i=0;$i<4;$i++){
+  $row = array();
+  for($j=0;$j<4;$j++){
+    array_push($row, mt_rand(100,999));
+  }
+  array_push($matrix, $row);
+}
+
+$maximo = 0;
+$minimo = 1000;
+$acum = 0;
+foreach($matrix as $mrow){
+  $rmax = max($mrow);
+  if($rmax > $maximo){
+    $maximo = $rmax;
+  }
+  $rmin = min($mrow);
+  $minimo = ($rmin < $minimo) ? $rmin: $minimo;
+  foreach($mrow as $value){
+    echo $value."&nbsp;&nbsp;&nbsp;";
+    $acum+= $value;
+  }
+  echo "<br>";
+}
+
+echo "Maximo: " . $maximo . "<br>";
+echo "Minimo: " . $minimo . "<br>";
+echo "Promedio: " . $acum / 16 . "<br>";
+
+//Matriz con tabla de multiplicar
+$matrix = array();
+array_push($matrix, array("", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+for($i=1;$i<=10;$i++){
+  $row= array($i);
+  for($j=1;$j<=10;$j++){
+    array_push($row, $i * $matrix[0][$j]);
+  }
+  array_push($matrix, $row);
+}
+
+echo "<table border>";
+  foreach($matrix as $row){
+    echo "<tr>";
+    foreach($row as $value){
+      echo '<td style="padding: .2em .5em">'.$value."</td>";
+    }
+    echo "</tr>";
+  }
+echo "</table>";

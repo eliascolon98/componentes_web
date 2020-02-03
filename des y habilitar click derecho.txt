@@ -1,0 +1,17 @@
+var contextflag = true;
+function letCopy(){
+    return contextflag;
+}
+$(document).bind("contextmenu",function(e){
+        if(!letCopy()){
+            e.preventDefault();
+            return false;
+        }
+});
+    
+$(".img").mouseover(function(){
+        contextflag = false;
+});
+$(".img").mouseout(function(){
+        contextflag = true;
+});

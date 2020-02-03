@@ -1,0 +1,4 @@
+Colocar el id validar en el formulario y cambiar el tipo de envio 
+de submit a button
+<input type="checkbox"  name="acepto_chk" id="acepto_chk"  class="chk" />
+

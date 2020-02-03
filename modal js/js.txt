@@ -1,0 +1,17 @@
+var noti = '<div id="contenedor" class="c-1">'+
+	'<div class="row row-modal">'+
+		'<i class="fas fa-times" id="btn-cerrar" onclick="salir()"></i>'+
+		
+	'</div>'+
+	'</div>';
+
+
+$("#shoppingIcon").click(function(){
+	alert("assdasd")
+	$('.cont-modal').append(noti);
+	$('.cont-modal').css({'display':'flex'});
+});
+
+function salir(){
+$('.cont-modal').css({'display':'none'});
+$('.c-1').css({'display':'none'});

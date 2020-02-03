@@ -1,0 +1,70 @@
+      <div class="container-n" id="notices-info">
+
+      </div>
+
+      '<div>'+
+          '<div>'+
+         '<div>'+
+           '<img src="icm-noticias/admin/' + data[j].imagen + '" alt="">'+
+         '</div>'+
+         '<div>'+
+           '<p>' + data[j].fecha + '</p>'+
+           '<div>'+
+             '<h4>' + data[j].titulo + '</h4>'+
+             '<p>' + data[j].descripcion + '</p>'+
+             '<a href="detalle_noticia.php?codigo=' + data[j].id + '">Ver más</a>'+
+           '</div>'+
+         '</div>'+
+       '</div>'+
+       '</div>';
+----------------------------------------------------------------
+
+css
+
+.container-n{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 0px 30px 55px;
+ }
+.container-n > div{
+    width: 30%;
+    margin-top: 25px;
+    margin-right: 25px
+ }
+.container-n > div > div{
+    width: 100%;
+    border: 1px solid #dee2e6;
+ }
+.container-n > div > div > div:first-child{
+    width: 100%;
+    border-left: 27px solid #28a745;
+ }
+.container-n > div > div > div:first-child img{
+    width: 100%;
+ }
+.container-n > div > div > div{
+    width: 100%;
+    border-left: 27px solid #28a745;
+ }
+.container-n > div > div > div > p:first-child{
+    background: #28a745;
+    width: 40%;
+    color: #fff;
+    padding: 0px 0px 0px 16px;
+ }
+.container-n > div > div > div > div{
+    padding: 0px 0px 16px 16px;
+}
+@media (max-width: 414px){
+
+.container-n > div {
+    width: 100%;
+    padding: 0px;
+}
+.container-n {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 0px 30px 26px;
+}
+
+}

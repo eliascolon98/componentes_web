@@ -1,0 +1,5 @@
+<video id="cover-video" class="tam-video" width="440" height="280" preload="metadata" autoplay="" controls="" loop="">
+<source src="'+video+'" type="video/mp4">
+</video>
+
+https://lenguajehtml.com/p/html/multimedia/etiquetas-html-de-video

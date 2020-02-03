@@ -1,0 +1,6 @@
+$("select[name=newsletter]").change(function () {
+                                var option = $('select[name=newsletter]').val();
+                                    if(option == "si"){
+                                        document.getElementById("popup").value= "no";
+                                    }
+                                });
